@@ -9,6 +9,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.rubencordoba.omnilibrary.features.bookdetails.OmniBookDetailsScreen
+import com.rubencordoba.omnilibrary.features.error.OmniErrorScreen
+import com.rubencordoba.omnilibrary.features.info.OmniInfoScreen
 import com.rubencordoba.omnilibrary.features.main.OmniMainScreen
 import com.rubencordoba.omnilibrary.features.searchlist.OmniSearchListScreen
 import com.rubencordoba.omnilibrary.ui.theme.OmniLibraryTheme
@@ -36,6 +39,15 @@ fun NavigationComponent(navController: NavHostController) {
         }
         composable("searchlist") {
             OmniSearchListScreen(viewModel = viewModel(), navController = navController)
+        }
+        composable("bookdetails") {
+            OmniBookDetailsScreen(viewModel = viewModel(), navController = navController)
+        }
+        composable("info") {
+            OmniInfoScreen(navController = navController)
+        }
+        composable("error") {
+            OmniErrorScreen(viewModel = viewModel(), navController = navController)
         }
     }
 }

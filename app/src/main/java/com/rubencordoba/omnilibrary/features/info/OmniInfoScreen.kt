@@ -1,4 +1,4 @@
-package com.rubencordoba.omnilibrary.features.searchlist
+package com.rubencordoba.omnilibrary.features.info
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -9,16 +9,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun OmniSearchListScreen(viewModel: OmniSearchListViewModel, navController: NavController) {
+fun OmniInfoScreen(navController: NavController) {
     Column() {
-        Text("This is Search List Fragment!")
+        Text("This is Info Fragment!")
         Spacer(modifier = Modifier.height(4.dp))
-        Button(onClick = { viewModel.goToMain(navController) }) {
+        Button(onClick = { navController.navigate("main") }) {
             Text(text = "Ir a Main Screen")
         }
     }
@@ -26,6 +25,6 @@ fun OmniSearchListScreen(viewModel: OmniSearchListViewModel, navController: NavC
 
 @Preview
 @Composable
-fun OmniSearchListScreenPreview() {
-    OmniSearchListScreen(viewModel(), rememberNavController())
+fun OmniInfoScreenPreview() {
+    OmniInfoScreen(rememberNavController())
 }

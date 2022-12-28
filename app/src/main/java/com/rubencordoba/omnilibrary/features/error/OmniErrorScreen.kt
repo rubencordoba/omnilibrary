@@ -1,4 +1,4 @@
-package com.rubencordoba.omnilibrary.features.searchlist
+package com.rubencordoba.omnilibrary.features.error
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -14,11 +14,11 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun OmniSearchListScreen(viewModel: OmniSearchListViewModel, navController: NavController) {
+fun OmniErrorScreen(viewModel: OmniErrorViewModel, navController: NavController) {
     Column() {
-        Text("This is Search List Fragment!")
+        Text("This is Error Fragment!")
         Spacer(modifier = Modifier.height(4.dp))
-        Button(onClick = { viewModel.goToMain(navController) }) {
+        Button(onClick = { /* TODO */ }) {
             Text(text = "Ir a Main Screen")
         }
     }
@@ -26,6 +26,6 @@ fun OmniSearchListScreen(viewModel: OmniSearchListViewModel, navController: NavC
 
 @Preview
 @Composable
-fun OmniSearchListScreenPreview() {
-    OmniSearchListScreen(viewModel(), rememberNavController())
+fun OmniErrorScreenPreview() {
+    OmniErrorScreen(viewModel(), rememberNavController())
 }
