@@ -13,6 +13,13 @@
     <string name="main_book_search_criteria_description_text">TITLE</string>
     <string name="main_book_search_criteria_hint_text">Book Title</string>
 
+    <string name="search_list_item_book_title_text">Title Text</string>
+    <string name="search_list_item_author_text">Author Text</string>
+    <string name="search_list_item_publish_date_text">Publish Date</string>
+    <string name="search_list_item_isbn_text">ISBN Text</string>
+    <string name="search_list_button_back_text">Back to Main</string>
+
+
     <string name="info_text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
