@@ -7,6 +7,12 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="main_fragment_title">OmniLibrary</string>
+    <string name="main_search_button">Search!</string>
+    <string name="main_info_button">Info</string>
+    <string name="main_book_search_criteria_description_text">TITLE</string>
+    <string name="main_book_search_criteria_hint_text">Book Title</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus

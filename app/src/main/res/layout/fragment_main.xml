@@ -1,13 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/material_dynamic_neutral95"
     tools:context=".features.main.MainFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:id="@+id/main_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:text="@string/main_fragment_title"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_info_button" />
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/main_info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/main_info_button"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_info_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/main_book_input_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/main_book_search_criteria_hint_text"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_book_search_criteria_card_view" />
+
+    <Button
+        android:id="@+id/main_search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/main_search_button"
+        app:layout_constraintEnd_toEndOf="@+id/main_book_input_text"
+        app:layout_constraintStart_toStartOf="@+id/main_book_input_text"
+        app:layout_constraintTop_toBottomOf="@+id/main_book_input_text" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_book_search_criteria_card_view"
+        android:layout_width="0dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_title_text">
+
+        <ImageView
+            android:id="@+id/main_book_search_criteria_image"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:src="@drawable/book_open" />
+
+        <TextView
+            android:id="@+id/main_book_search_criteria_description_text"
+            android:layout_width="139dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="128dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/main_book_search_criteria_description_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/main_book_search_criteria_arrow"
+            android:layout_width="53dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
