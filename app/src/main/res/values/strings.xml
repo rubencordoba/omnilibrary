@@ -3,9 +3,9 @@
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="main_fragment_label">Main Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="searchlist_fragment_label">Search List Fragment</string>
+    <string name="bookdetails_fragment_label">Book Details Fragment</string>
+    <string name="info_fragment_label">Info Fragment</string>
 
     <string name="main_fragment_title">OmniLibrary</string>
     <string name="main_search_button">Search!</string>

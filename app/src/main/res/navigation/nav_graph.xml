@@ -11,6 +11,51 @@
         android:label="@string/main_fragment_label"
         tools:layout="@layout/fragment_main">
 
+        <action
+            android:id="@+id/action_MainFragment_to_SearchListFragment"
+            app:destination="@id/SearchListFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_BookDetailsFragment"
+            app:destination="@id/BookDetailsFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_InfoFragment"
+            app:destination="@id/InfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SearchListFragment"
+        android:name="com.rubencordoba.omnilibrary.features.searchlist.SearchListFragment"
+        android:label="@string/searchlist_fragment_label"
+        tools:layout="@layout/fragment_search_list">
+
+        <action
+            android:id="@+id/action_SearchListFragment_to_BookDetailsFragment"
+            app:destination="@id/BookDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/BookDetailsFragment"
+        android:name="com.rubencordoba.omnilibrary.features.bookdetails.BookDetailsFragment"
+        android:label="@string/bookdetails_fragment_label"
+        tools:layout="@layout/fragment_book_details">
+
+        <action
+            android:id="@+id/action_BookDetailsFragment_to_SearchListFragment"
+            app:destination="@id/SearchListFragment" />
+        <action
+            android:id="@+id/action_BookDetailsFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/InfoFragment"
+        android:name="com.rubencordoba.omnilibrary.features.info.InfoFragment"
+        android:label="@string/info_fragment_label"
+        tools:layout="@layout/fragment_info">
+
+        <action
+            android:id="@+id/action_InfoFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
     </fragment>
 
 </navigation>
